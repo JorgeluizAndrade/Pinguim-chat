@@ -17,6 +17,7 @@ const Page: FC = () => {
         await signIn('google')
       } catch(error){
           toast.error('Something went wrong with your login.')
+          console.log("error", error)
       } finally{
         setIsLoaging(false)
       }
