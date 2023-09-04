@@ -58,8 +58,11 @@ const page = async ({ params }: PageProps) => {
     notFound();
   }
 
-  const chatPartner = (await db.get(`user:${chatPartnerId}`)) as User;
-
+  const chatPartnerRow = (await fetchRedis(
+    "get",
+    `user:${chatPartnerId}`
+  )) as string;
+  const chatPartner = JSON.parse(chatPartnerRow);
   if (!chatPartner) {
     notFound();
   }
@@ -67,11 +70,11 @@ const page = async ({ params }: PageProps) => {
   const initialMessages = await getChatMessages(chatId);
 
   return (
-    <div className='flex-1 justify-between flex flex-col h-full max-h-[calc(100vh-6rem)]'>
-    <div className='flex sm:items-center justify-between py-3 border-b-2 border-gray-200'>
-      <div className='relative flex items-center space-x-4'>
-        <div className='relative'>
-          <div className='relative w-8 sm:w-12 h-8 sm:h-12'>
+    <div className="flex-1 justify-between flex flex-col h-full max-h-[calc(100vh-6rem)]">
+      <div className="flex sm:items-center justify-between py-3 border-b-2 border-gray-200">
+        <div className="relative flex items-center space-x-4">
+          <div className="relative">
+            <div className="relative w-8 sm:w-12 h-8 sm:h-12">
               <Image
                 fill
                 referrerPolicy="no-referrer"
@@ -92,7 +95,11 @@ const page = async ({ params }: PageProps) => {
           </div>
         </div>
       </div>
-      <Messages chatId={chatId} sessionId={session.user.id} initialMessages={initialMessages} />
+      <Messages
+        chatId={chatId}
+        sessionId={session.user.id}
+        initialMessages={initialMessages}
+      />
       <ChatInput chatId={chatId} chatPartner={chatPartner} />
     </div>
   );
