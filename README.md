@@ -1,34 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Piguim Chat
+Welcome to Piguim Chat, a real-time chat application that offers an agile and effective communication experience. In this project, we are utilizing a variety of modern technologies to create a robust and secure chat platform.
 
-## Getting Started
+## Technologies Used
+In this project, we are making use of the following technologies:
 
-First, run the development server:
+<ul>
+ <li> Next.js: A React framework for server-side rendering.</li>
+<li>React.js: A JavaScript library for building user interfaces.</li>
+<li>Redis: An in-memory database for efficient real-time data storage.</li>
+<li>TypeScript: The primary programming language for enhanced safety and productivity.</li>
+<li>Tailwind CSS: A utility-first CSS framework for streamlined styling.</li>
+<li>Zod: A library for data schema validation in TypeScript.</li>
+<li>Pusher: A real-time messaging service for real-time chat features.</li>
+<li>NextAuth: A library for JWT authentication and integration with external authentication providers.</li>
+</ul>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## About the Project
+Piguim Chat is a real-time chat application with the following features:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<li>JWT authentication to ensure user data security and protection.</li>
+<li>Google authentication for easy and convenient login to the platform.</li>
+<li>Friend invitations via email (within the application).</li>
+<li>Real-time chat for instant communication.</li>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Database
+To meet the needs of real-time data storage and retrieval, we have chosen Redis as the primary database. Redis fits perfectly as a message broker and offers an efficient data structure for this purpose.
 
-## Learn More
+## Real-Time Chat
+To implement real-time chat functionality, we have opted for Pusher. Pusher provides an incredibly agile and effective real-time communication experience, allowing us to smoothly and robustly implement chat features.
 
-To learn more about Next.js, take a look at the following resources:
+## Feedback and Demo
+We invite you to check out the Piguim Chat demo and share your feedback with us. You can access the demo here. If you'd like to test the application, send an invitation via the website to the email address: luizj1718@gmail.com.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
