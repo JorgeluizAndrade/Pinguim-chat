@@ -2,7 +2,7 @@
 
 import { FC, useState, Fragment, useEffect } from "react";
 import { Dialog, Transition } from "@headlessui/react";
-import { Menu, X } from "lucide-react";
+import { Home, Menu, X } from "lucide-react";
 import Link from "next/link";
 import Button, { buttonVarients } from "./ui/Button";
 import { Icons } from "./icons";
@@ -41,7 +41,7 @@ const MobileLayout: FC<MobileLayoutProps> = ({
           href="/dashboard"
           className={buttonVarients({ variant: "ghost" })}
         >
-          <Icons.Logo className="h-6 w-auto text-indigo-600" />
+          <Home className="h-6 w-auto text-indigo-600" />
         </Link>
         <Button onClick={() => setOpen(true)} className="gap-4">
           Menu <Menu className="h-6 w-6" />

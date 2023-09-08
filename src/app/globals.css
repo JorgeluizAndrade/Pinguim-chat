@@ -6,7 +6,11 @@
     container {
       @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8
     }
+    body {
+        @apply dark:bg-gradient-to-l from-gray-900 to-zinc-500 text-black
+    }
   }
+
 
 .scrollbar-w2::-webkit-scrollbar{
     width: 0.25rem;

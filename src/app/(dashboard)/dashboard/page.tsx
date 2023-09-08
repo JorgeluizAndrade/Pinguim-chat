@@ -35,22 +35,15 @@ const page = async ({}) => {
 
   return (
     <div>
-
-    <div className="animate-pulse flex justify-center">
-      <h1
-        className="text-5xl 
-      bg-gradient-to-r from-neutral-600 to-blue-400 bg-clip-text text-transparent"
-      >
-        Welcome To Pinguim Chat!
-      </h1>
-    </div>
-
+      <div className='text-2xl font-semibold text-slate-950'>
+        <h4>Hi {`${session.user.name}`}, Welcome to Pinguim Chat</h4>
+      </div>
     <div className="container py-4 mt-10">
-      <h1 className="font-bold text-3xl mb-8 text-neutral-500">Your Recent Chats</h1>
+      <h1 className="font-bold text-3xl mb-8 text-slate-700">Recent Chats</h1>
       {friendsLastMessage.length === 0 ? (<p>Not to show here</p>) : (
         friendsLastMessage.map((friend)=> (
           <div
-          className="relative bg-zinc-50 border border-zinc-200 p-3 rounded-md"
+          className="relative border-2 border-gray-600 px-4 py-6 rounded-lg transform transition duration-700 hover:scale-95 hover:shadow-[-9px_-7px_49px_11px_#2818633E] cursor-pointer"
           key={friend.id}>
             <div className="absolute right-4 inset-y-0 flex items-center">
               <ArrowRight className="w-4 h-4 text-zinc-700"/>
@@ -70,7 +63,7 @@ const page = async ({}) => {
                 </div>
               </div>
               <div>
-                <h4 className='text-lg font-semibold'>{friend.name}</h4>
+                <h4 className='text-lg font-mono'>{friend.name}</h4>
                 <p className='mt-1 max-w-md'>
                   <span className='text-zinc-400'>
                     {friend.lastMessage.senderId === session.user.id

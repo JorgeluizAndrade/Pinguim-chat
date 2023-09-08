@@ -1,10 +1,10 @@
 import Providers from "@/components/Providers";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Roboto_Mono } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 
 
-export const roboto_mono = Roboto_Mono({
+export const open_sans = Open_Sans({
   subsets: ['latin'],
   display: 'swap',
 })
@@ -20,8 +20,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="bg-gradient-to-r from-stone-50 to-cyan-100">
-      <body className={roboto_mono.className}>
+    <html lang="en" className="bg-gradient-to-l from-stone-200 to-slate-50">
+      <body className={open_sans.className}>
         <Providers>{children}</Providers>
       </body>
     </html>
