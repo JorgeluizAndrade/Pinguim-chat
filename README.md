@@ -25,7 +25,7 @@ Piguim Chat is a real-time chat application with the following features:
 
 
 ## Serveless
-To meet the needs of real-time data storage and retrieval, we have chosen Redis as the primary database. Redis fits perfectly as a message broker and offers an efficient data structure for this purpose.
+To meet the needs of real-time data storage and retrieval, we have chosen Redis. Redis fits perfectly as a message broker and offers an efficient data structure for this purpose.
 
 ## Real-Time Chat
 To implement real-time chat functionality, we have opted for Pusher. Pusher provides an incredibly agile and effective real-time communication experience, allowing us to smoothly and robustly implement chat features.
